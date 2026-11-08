@@ -360,3 +360,28 @@ footer.foot a:hover{color:var(--ink)}
 .lb-nav{all:unset;cursor:pointer;position:fixed;top:50%;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:18px}
 .lb-nav.prev{left:max(12px,env(safe-area-inset-left,0px))}.lb-nav.next{right:max(12px,env(safe-area-inset-right,0px))}
 @media (max-width:600px){.lb-stage{padding:16px 12px 80px}.lb-nav{top:auto;bottom:max(16px,env(safe-area-inset-bottom,0px))}.lb-title{display:none}}
+
+/* ===== porto case ===== */
+.brand-intro{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,64px)}
+.brand-intro > div{display:grid;gap:12px;align-content:start}
+.brand-intro h2{font-size:clamp(32px,3.6vw,48px)}
+.brand-intro p:not(.eyebrow){color:var(--ink-2)}
+.brand-intro .brief-box{grid-column:1/-1;border-top:1px solid var(--ink);padding-top:24px}
+.brand-intro .brief-box .lede{color:var(--ink);max-width:48ch}
+.prows{display:grid;gap:clamp(40px,7vh,80px)}
+.prows article{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:clamp(24px,4vw,56px);align-items:center}
+.prows article:nth-child(even){grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr)}
+.prows article:nth-child(even) .media{order:2}
+.prows .media{border-radius:20px;max-height:640px;border:1px solid var(--line)}
+.prows .media img{object-fit:cover;object-position:top}
+.prows .copy{display:grid;gap:10px}
+.prows .pain{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.prows h3{font-size:clamp(24px,2.4vw,32px)}
+.prows p{color:var(--ink-2)}
+.lives{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.lives figure{margin:0;display:grid;gap:10px}
+.lives .media{aspect-ratio:16/10;border-radius:18px;border:1px solid var(--line)}
+.lives .media img{object-fit:cover;object-position:top}
+.lives figcaption{font-size:14px;color:var(--ink-2)}
+.prows article:nth-child(even) .media{order:2}
+@media (max-width:820px){.brand-intro,.prows article,.prows article:nth-child(even),.lives{grid-template-columns:1fr}.prows article:nth-child(even) .media{order:0}}
