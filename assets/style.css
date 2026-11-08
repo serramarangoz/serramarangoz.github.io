@@ -385,3 +385,11 @@ footer.foot a:hover{color:var(--ink)}
 .lives figcaption{font-size:14px;color:var(--ink-2)}
 .prows article:nth-child(even) .media{order:2}
 @media (max-width:820px){.brand-intro,.prows article,.prows article:nth-child(even),.lives{grid-template-columns:1fr}.prows article:nth-child(even) .media{order:0}}
+
+/* ===== scrollspy ===== */
+.menu a:not(.open){position:relative;padding-block:6px}
+.menu a:not(.open)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.menu a.active,.menu a[aria-current="page"]{color:var(--ink);font-weight:500}
+.menu a.active::after,.menu a[aria-current="page"]::after{transform:scaleX(1)}
+.rail .label{transition:opacity .25s}
+.rail .label.swap{opacity:0}

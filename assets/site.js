@@ -99,3 +99,20 @@
   document.addEventListener('keydown', function(e){ if (lb.hidden) return; if (e.key==='Escape') close(); if (e.key==='ArrowRight') step(1); if (e.key==='ArrowLeft') step(-1); });
   window.addEventListener('resize', function(){ if(!lb.hidden) render(); });
 })();
+
+// scrollspy: highlight the section in view (home page)
+(function(){
+  var ids = ['about','work','contact'], secs = ids.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  if (!secs.length) return;
+  var links = {}; document.querySelectorAll('.menu a:not(.open)').forEach(function(a){ var h=a.getAttribute('href')||''; var i=h.indexOf('#'); if(i>-1){ var id=h.slice(i+1); if(ids.indexOf(id)>-1) links[id]=a; } });
+  var label = document.querySelector('.rail .label'), names = {about:'About', work:'Work', contact:'Contact'}, current = null;
+  function update(){
+    var line = window.innerHeight * 0.35, now = null;
+    secs.forEach(function(s){ if (s.getBoundingClientRect().top <= line) now = s.id; });
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 4) now = 'contact';
+    if (now === current) return; current = now;
+    Object.keys(links).forEach(function(id){ links[id].classList.toggle('active', id === now); });
+    if (label){ label.classList.add('swap'); setTimeout(function(){ label.textContent = now ? names[now] : 'Portfolio'; label.classList.remove('swap'); }, 180); }
+  }
+  window.addEventListener('scroll', update, {passive:true}); window.addEventListener('resize', update); update();
+})();
