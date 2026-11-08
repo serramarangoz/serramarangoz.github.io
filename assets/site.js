@@ -63,3 +63,39 @@
 
   var yr = document.getElementById('year'); if (yr) yr.textContent = new Date().getFullYear();
 })();
+
+// back to top
+(function(){
+  var b = document.querySelector('.totop'); if (!b) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function t(){ b.classList.toggle('on', window.scrollY > 700); }
+  window.addEventListener('scroll', t, {passive:true}); t();
+  b.addEventListener('click', function(){ window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'}); var h=document.querySelector('.brand'); if(h) h.focus({preventScroll:true}); });
+})();
+
+// daily ui viewer
+(function(){
+  var sets = window.DAILY_SETS, lb = document.getElementById('lb'); if (!sets || !lb) return;
+  var tabs = document.getElementById('lbTabs'), stage = document.getElementById('lbStage'), title = document.getElementById('lbTitle');
+  var cur = null, idx = 0, opener = null;
+  function render(){
+    var s = sets[cur], it = s.items[idx];
+    title.textContent = s.title;
+    tabs.innerHTML = '';
+    s.items.forEach(function(x, i){ var b=document.createElement('button'); b.type='button'; b.textContent=x.label; b.setAttribute('aria-pressed', i===idx); b.onclick=function(){ idx=i; render(); }; tabs.appendChild(b); });
+    stage.innerHTML = '';
+    var im = new Image(); im.src = it.src; im.alt = s.title + ', ' + it.label; im.width = it.w; im.height = it.h;
+    im.style.width = Math.min(it.w, stage.clientWidth - 40) + 'px';
+    stage.appendChild(im); stage.scrollTop = 0;
+  }
+  function open(set, btn){ cur=set; idx=0; opener=btn; lb.hidden=false; document.body.style.overflow='hidden'; render(); document.getElementById('lbClose').focus(); }
+  function close(){ lb.hidden=true; document.body.style.overflow=''; if(opener) opener.focus(); }
+  function step(d){ var n=sets[cur].items.length; idx=(idx+d+n)%n; render(); }
+  document.querySelectorAll('.zoom').forEach(function(b){ b.addEventListener('click', function(){ open(b.dataset.set, b); }); });
+  document.getElementById('lbClose').onclick = close;
+  document.getElementById('lbPrev').onclick = function(){ step(-1); };
+  document.getElementById('lbNext').onclick = function(){ step(1); };
+  lb.addEventListener('click', function(e){ if (e.target === lb || e.target === stage) close(); });
+  document.addEventListener('keydown', function(e){ if (lb.hidden) return; if (e.key==='Escape') close(); if (e.key==='ArrowRight') step(1); if (e.key==='ArrowLeft') step(-1); });
+  window.addEventListener('resize', function(){ if(!lb.hidden) render(); });
+})();
