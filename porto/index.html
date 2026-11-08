@@ -51,14 +51,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .head{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:background .5s,backdrop-filter .5s}
 .head.solid{background:rgba(255,255,255,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .head .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:68px;gap:16px}
-.logo{font-size:36px;text-decoration:none;white-space:nowrap;width:5ch}
+.logo{font-family:var(--f-display);font-weight:500;font-size:30px;line-height:1;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
 .logo .didone{transform-origin:left center}
 .nav{display:flex;gap:44px}
 .nav a{text-decoration:none;font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
 .nav a:hover{text-decoration:underline;text-underline-offset:4px}
 .cart{justify-self:end;font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;display:flex;gap:8px;align-items:center}
 .cart b{display:inline-grid;place-items:center;min-width:20px;height:20px;border:1px solid var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
-@media (max-width:720px){.nav{display:none}.head .wrap{grid-template-columns:1fr auto}.logo{font-size:30px}}
+@media (max-width:720px){.nav{display:none}.head .wrap{grid-template-columns:1fr auto}.logo{font-size:26px}}
 
 /* ---------- hero: wash + wordmark window ---------- */
 .hero{position:relative;height:240vh}
@@ -193,14 +193,61 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .glass .big .roll,.main img,.glass .txt p{transition:none}
   .hero .tag .hint i{animation:none}
 }
+
+/* ===== v2 fixes ===== */
+.btn{box-sizing:border-box}
+.hero .intro{position:absolute;left:max(var(--gl),3.5vw);bottom:max(32px,calc(env(safe-area-inset-bottom,0px) + 24px));width:min(480px,calc(100% - 32px));
+  background:rgba(255,255,255,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--ink);padding:26px 28px 24px;display:grid;gap:12px;color:var(--ink)}
+.hero .intro .eyebrow{font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin:0}
+.hero .intro h1{font-size:clamp(64px,7vw,96px);line-height:.9;margin:0;font-weight:400}
+.hero .intro .lede{font-family:var(--f-body);font-size:16px;line-height:1.5;color:var(--ink-2);margin:0}
+.intro-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
+.intro-row .price{font-family:var(--f-mono);font-size:18px;margin-right:6px;font-variant-numeric:tabular-nums}
+.intro-row .btn{height:46px;padding:0 20px;font-size:13px}
+.hero .hint{position:absolute;right:max(var(--gr),3.5vw);bottom:max(36px,calc(env(safe-area-inset-bottom,0px) + 28px));display:flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;
+  background:rgba(255,255,255,.88);border:1px solid var(--ink);padding:10px 14px}
+.hero .hint svg{width:18px;height:18px;animation:bob 1.8s var(--ease) infinite}
+@keyframes bob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+@media (max-width:720px){.hero .hint{display:none}.hero .intro{padding:20px}}
+
+.build .pin>.wrap{width:100%}
+.rail{align-items:center}
+.rail h2{line-height:1}
+.nums{align-items:center}
+.nums .arrow{display:flex;align-items:center}
+.nums button{display:inline-flex;align-items:center;justify-content:center;height:auto;width:1.2ch;line-height:1}
+.nums button .didone{line-height:1}
+.stagewrap{width:100%;max-width:1440px;margin:0 auto;padding-left:max(var(--gl),3.5vw);padding-right:max(var(--gr),3.5vw);display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(24px,4vw,56px);align-items:center}
+.stagewrap .stage{justify-self:center}
+.glass{position:static;width:100%;right:auto;bottom:auto;justify-self:stretch}
+.glass .top{padding:20px 24px 18px;gap:14px}
+.glass .big{font-size:72px}
+.glass .txt{min-height:7.2em}
+.glass .bar{padding:11px 24px}
+@media (max-width:820px){.stagewrap{grid-template-columns:1fr;padding-left:0;padding-right:0}.glass{width:auto;margin:0 max(var(--gl),3.5vw) max(18px,env(safe-area-inset-bottom,0px))}}
+.ghostword{display:none}
+
+.twoup .lab{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding:clamp(56px,9vh,96px) max(var(--gl),3.5vw) 28px}
+.twoup .lab h2{font-family:var(--f-mono);font-weight:500;font-size:clamp(20px,2vw,28px);margin-bottom:8px}
+.twoup .lab p{font-family:var(--f-body);font-size:17px;color:var(--ink-2);max-width:44ch}
+.twoup .lab .btn{height:46px}
+
+.buyrow{gap:12px}
+.ship{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;font-family:var(--f-body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.ship li{display:flex;gap:12px;align-items:flex-start;border-top:1px solid var(--ink);padding-top:14px}
+.ship svg{flex:0 0 22px;width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ship span{display:grid;gap:2px;font-size:13px;color:var(--ink-2);line-height:1.4}
+.ship b{font-weight:500;font-size:14px;color:var(--ink)}
+@media (max-width:820px){.ship{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.hero .hint svg{animation:none}}
 </style>
 </head>
 <body>
 
 
-<header class="head" id="head">
+<header class="head solid" id="head">
   <div class="wrap">
-    <a class="logo" href="#top" data-go="top" aria-label="ilmek, back to top"><span class="didone">ILMEK</span></a>
+    <a class="logo" href="#top" data-go="top" aria-label="ilmek, back to top">ilmek</a>
     <nav class="nav" aria-label="Sections">
       <a href="#build" data-go="build">Assembly</a>
       <a href="#ways" data-go="ways">Colourways</a>
@@ -217,11 +264,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <div class="pin">
       <img class="fallback" id="heroFallback" src="img/room.jpg" alt="Porto lounge chair in a sunlit reading corner" width="1448" height="1086">
       <canvas id="heroCanvas" aria-hidden="true"></canvas>
-      <h1 class="sr">Porto lounge chair</h1>
-      <div class="tag">
-        <p>Porto. A solid walnut lounge chair with a low, generous seat. The place you drop anchor at the end of the day.</p>
-        <div class="hint"><i></i>Scroll</div>
+      <div class="intro">
+        <p class="eyebrow">ilmek · Lounge chair</p>
+        <h1><span class="didone">Porto</span></h1>
+        <p class="lede">A solid walnut lounge chair with a low, generous seat. The place you drop anchor at the end of the day.</p>
+        <div class="intro-row"><span class="price">€890</span><a class="btn black" href="#shop" data-go="shop">Shop Porto</a><a class="btn line" href="#build" data-go="build">See how it’s made</a></div>
       </div>
+      <div class="hint" aria-hidden="true"><span>Scroll to explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
     </div>
   </section>
 
@@ -246,7 +295,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           <div class="layer"><img src="img/foam.jpg" alt=""></div>
           <div class="layer"><img src="img/cream.jpg" alt=""></div>
         </div>
-      </div>
       <div class="glass" id="glass">
         <div class="top">
           <div class="big"><div class="roll" id="roll"><span class="didone">01</span><span class="didone">02</span><span class="didone">03</span><span class="didone">04</span></div></div>
@@ -259,6 +307,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         </div>
         <div class="bar"><span id="stepName">The frame</span><span id="stepCount">1 / 4</span></div>
       </div>
+      </div>
     </div>
   </section>
 
@@ -266,18 +315,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   <section class="mani" aria-label="About Porto">
     <div class="bg" id="maniBg"></div>
     <div class="wrap">
-      <p class="track1" id="t1">.built in four layers, from a bare walnut frame to a hand-sewn weave, Porto is a low chair for long hours by the window+</p>
+      <p class="track1" id="t1">Built in four layers, from a bare walnut frame to a hand-sewn weave, Porto is a low chair for long hours by the window.</p>
       <p class="track2" id="t2">sit down, drop anchor, stay a while.</p>
     </div>
   </section>
 
   <!-- TWO-UP -->
   <section class="twoup" id="ways" aria-label="Colourways">
-    <h2 class="lab">Colourways</h2>
-    <figure><img class="obj" src="img/charcoal.jpg" alt="Porto in charcoal wool blend with a walnut frame" loading="lazy" data-par><figcaption><span>Charcoal / Walnut</span><span>€890</span></figcaption></figure>
-    <figure><img class="obj" src="img/oak.jpg" alt="Porto in cream weave with a natural oak frame" loading="lazy" data-par><figcaption><span>Cream / Natural oak</span><span>€890</span></figcaption></figure>
+    <div class="lab"><div><h2>Colourways</h2><p>Three weaves and two woods. Every combination is €890 and ships fully assembled.</p></div><a class="btn line" href="#shop" data-go="shop">Choose yours</a></div>
+    <figure><img class="obj" src="img/charcoal.jpg" alt="Porto in charcoal wool blend with a walnut frame" loading="lazy" data-par><figcaption><span>Charcoal wool blend</span><span>Walnut frame</span></figcaption></figure>
+    <figure><img class="obj" src="img/oak.jpg" alt="Porto in cream weave with a natural oak frame" loading="lazy" data-par><figcaption><span>Cream bouclé</span><span>Natural oak frame</span></figcaption></figure>
     <figure><img src="img/texture.jpg" alt="Close-up of the cream weave and the hand-rounded walnut armrest" loading="lazy" data-par><figcaption style="color:#fff"><span>Armrest, rounded by hand</span><span>Detail</span></figcaption></figure>
-    <figure><img class="obj" src="img/sand.jpg" alt="Porto in sand linen blend with a walnut frame" loading="lazy" data-par><figcaption><span>Sand / Walnut</span><span>€890</span></figcaption></figure>
+    <figure><img class="obj" src="img/sand.jpg" alt="Porto in sand linen blend with a walnut frame" loading="lazy" data-par><figcaption><span>Sand linen blend</span><span>Walnut frame</span></figcaption></figure>
   </section>
 
   <!-- SHOP -->
@@ -313,7 +362,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           <a class="btn line" href="#build" data-go="build">See the assembly</a>
         </div>
         <div class="status" id="status" role="status"></div>
-        <div class="ship"><span>Ships in 2–3 weeks</span><span>Free EU delivery</span><span>30-day returns</span></div>
+        <ul class="ship">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg><span><b>Ships in 2–3 weeks</b>Fully assembled, white-glove delivery</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4"/></svg><span><b>30-day returns</b>Free pickup if it isn’t right</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><b>10-year frame warranty</b>Solid walnut, glued joints</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -379,7 +432,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   function drawHero(p){
     if(!ready) return;
     const w=cv.width,h=cv.height;
-    const wash=reduce?0.86:ease(clamp(p/0.42))*0.86;
+    const wash=reduce?0.86:0.5+ease(clamp(p/0.42))*0.36;
     const grow=reduce?1:ease(clamp((p-0.05)/0.55));
     // base photo + gentle push-in
     ctx.save(); const z=1.08-0.08*grow; ctx.translate(w/2,h/2); ctx.scale(z,z); ctx.translate(-w/2,-h/2); cover(ctx,w,h); ctx.restore();
@@ -390,7 +443,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     octx.globalCompositeOperation='destination-in';
     const sx=0.62; octx.font=`400 100px "Bodoni Moda", Didot, Georgia, serif`; const mw=octx.measureText('PORTO').width*sx;
     const target=w*0.94; const base=100*target/mw;
-    const scale=1.9-0.9*grow; const fs=base*scale;
+    const scale=1.15-0.15*grow; const fs=base*scale;
     octx.save(); octx.translate(w/2, h*0.47 - (reduce?0:clamp((p-0.7)/0.3))*h*0.12); octx.scale(sx,1);
     octx.font=`400 ${fs}px "Bodoni Moda", Didot, Georgia, serif`; octx.textAlign='center'; octx.textBaseline='middle';
     octx.fillStyle='#000'; octx.fillText('PORTO',0,0); octx.restore();
@@ -430,7 +483,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   const head=document.getElementById('head');
   function frame(){
     const hp=pinP(hero);
-    head.classList.toggle('solid', hp>0.98);
+    head.classList.add('solid');
     drawHero(hp);
     if(reduce){ layers.forEach(l=>{l.style.opacity=1;}); return; }
 
