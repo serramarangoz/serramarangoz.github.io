@@ -434,3 +434,8 @@ footer.foot a:hover{color:var(--ink)}
 @media (max-width:520px){.stages span:not(:first-child) {padding:0 8px}.stages span:nth-child(2){font-size:0}.stages span:nth-child(2) b{font-size:16px}}
 .odak .decisions .shot{display:flex;justify-content:center;align-items:center}
 .odak .decisions .shot img{height:100%;width:auto;max-width:100%;object-fit:contain}
+
+/* fixes: tools list overlap, phone prototypes on mobile */
+.cv dl.tools div{grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr)}
+@media (max-width:820px){.cv dl.tools div{grid-template-columns:1fr}}
+@media (max-width:700px){.player{aspect-ratio:9/19}.dui-proto .player{aspect-ratio:16/10}}
