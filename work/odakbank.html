@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Odakbank — Serra Marangoz</title>
+<meta name="description" content="A money-transfer flow for a fictional digital bank, built from 50 real complaints so the app confirms when the money lands, not just when it leaves.">
+<meta property="og:title" content="Odakbank — Serra Marangoz">
+<meta property="og:description" content="A money-transfer flow for a fictional digital bank, built from 50 real complaints so the app confirms when the money lands, not just when it leaves.">
+<meta property="og:image" content="https://serramarangoz.github.io/assets/img/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f8f8f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%231e1e1e%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2734%27 text-anchor=%27middle%27 fill=%27white%27%3ESM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="rail" aria-hidden="true"><div class="prog"></div><div class="label">Portfolio</div><div class="num">05</div></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../">Serra Marangoz</a>
+    <nav class="menu" aria-label="Main"><a href="../#about">About</a><a href="../#work" aria-current="page">Work</a><a href="../#contact" class="hide-sm">Contact</a>
+      <a class="open" href="../#contact"><i></i><span>Open to work</span></a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<div class="odak">
+<section class="case-hero"><div class="wrap">
+  <a class="back" href="../#work">← All work</a>
+  <div class="grid">
+    <div class="copy">
+      <p class="eyebrow">Case study 05 · November 2026 · Mobile banking</p>
+      <h1>Odakbank</h1>
+      <p class="lede">A money-transfer flow for a fictional digital bank, rebuilt around the question people still ask after they tap Send: did the money actually arrive?</p>
+      <div class="tags"><span class="tag">Fintech</span><span class="tag">UX research</span><span class="tag">UX writing</span><span class="tag">Design system</span></div>
+      <div class="btns"><a class="btn solid" href="#prototype">Try the prototype</a><a class="btn" href="https://www.figma.com/design/Xk2Ts7TVGjA5XOgJDJNBs8/Serra-Marangoz---2026-Portfolio?node-id=304-2" target="_blank" rel="noopener">Figma file ↗</a></div>
+    </div>
+    <div class="media "><span class="ph" aria-hidden="true">Odakbank</span><img src="../assets/img/work/odakbank.jpg" alt="Odakbank home, transfer tracker and recipient check screens" loading="eager" onerror="this.remove()"></div>
+  </div>
+  <dl class="meta"><div><dt>Role</dt><dd>Solo, research to UI</dd></div><div><dt>Scope</dt><dd>Transfer flow, 10 screens, design system</dd></div><div><dt>Evidence</dt><dd>50 public complaints, 19 banks and apps</dd></div><div><dt>Tools</dt><dd>Figma, Claude</dd></div></dl>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>The problem</h2><p>The interface is in Turkish; translations are in brackets.</p></div>
+  <div class="story rv"><article class=""><span class="k">01 · Observation</span><h3>“Successful” is not the end</h3><p>Today’s apps end the flow on “İşlem başarılı” (Transaction successful). For the user, that is exactly where the worry starts: has the money reached the other account?</p></article><article class="key"><span class="k">02 · Insight</span><h3>The flow should end when the money lands, not when the button is pressed.</h3><p>31 of 50 complaints happen after the money has been sent. People leave the app to check: they message the recipient, call the bank or open the other bank’s app.</p></article><article class=""><span class="k">03 · Goal</span><h3>Bring the confirmation back into the app</h3><p>Show where the money is at every step, explain failures in plain language, and let people stop a mistake before it costs them.</p></article></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>What 50 complaints say</h2></div>
+  <div class="research rv">
+    <div class="copy">
+      <p class="lede">There is little public data on how people feel after a transfer, so I went where they write about it.</p>
+      <p>I collected 50 recent complaints about money transfers on Şikâyetvar, Turkey’s largest public complaint site, across 19 banks and fintech apps, and coded each one by journey stage and theme.</p>
+      <div class="stages" role="img" aria-label="31 complaints after sending, 14 during, 5 before">
+        <span style="flex:31"><b>31</b> after sending</span><span style="flex:14"><b>14</b> during</span><span style="flex:5"><b>5</b></span>
+      </div>
+      <p class="small">31 after sending · 14 during · 5 before</p>
+      <div class="note"><b>A note on method.</b> I also ran five interviews with synthetic personas to sharpen hypotheses. They are labelled as synthetic everywhere and never used as evidence. Where they matched the real complaints (checking outside the app, unclear errors, name mismatch) I kept the idea; where they didn’t (amount typos) I marked it “to be tested”.</div>
+    </div>
+    <ol class="bars" aria-label="Complaints by theme, out of 50"><li><span class="lab">Sent, but never arrived</span><b class="tabular">15</b><span class="bar" style="--w:100%"></span></li><li><span class="lab">Name and IBAN didn’t match</span><b class="tabular">10</b><span class="bar" style="--w:67%"></span></li><li><span class="lab">Blocked, with an unclear message</span><b class="tabular">8</b><span class="bar" style="--w:53%"></span></li><li><span class="lab">Verification code didn’t arrive</span><b class="tabular">5</b><span class="bar" style="--w:33%"></span></li><li><span class="lab">Wrong IBAN, no way back</span><b class="tabular">4</b><span class="bar" style="--w:27%"></span></li><li><span class="lab">Sent to a scammer</span><b class="tabular">4</b><span class="bar" style="--w:27%"></span></li><li><span class="lab">Unexpected fee</span><b class="tabular">4</b><span class="bar" style="--w:27%"></span></li></ol>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>Today’s flow vs. mine</h2><p>Red tags count complaints at each step of today’s flow (A). Green tags show which theme each new step answers (B).</p></div>
+  <figure class="wide rv"><div class="media"><img src="../assets/img/odakbank/flow.jpg" alt="User flow: today’s transfer flow compared with the proposed flow, annotated with complaint counts" loading="lazy"></div>
+  <figcaption><span>The key decision: the flow ends at “Para hesaba geçti” (The money is in the account).</span><a href="https://www.figma.com/design/Xk2Ts7TVGjA5XOgJDJNBs8/Serra-Marangoz---2026-Portfolio?node-id=304-2" target="_blank" rel="noopener">Zoom in Figma ↗</a></figcaption></figure>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>Key decisions</h2><p>Each screen answers a complaint theme.</p></div>
+  <div class="decisions rv" style="--n:4"><article><div class="shot"><img src="../assets/img/screens/odakbank-verify.webp" alt="The bank names the recipient, not the user, Odakbank screen" loading="lazy"></div><span class="pain">10 complaints · name–IBAN mismatch</span><h3>The bank names the recipient, not the user</h3><p>Instead of typing a name that is never checked, the user sees the masked name from bank records and confirms it. “No” stops the flow before any money moves.</p></article><article><div class="shot"><img src="../assets/img/screens/odakbank-amount.webp" alt="A warning only when it matters, Odakbank screen" loading="lazy"></div><span class="pain">4 complaints · scams</span><h3>A warning only when it matters</h3><p>First-time payees trigger one calm note about the most common scam in Turkey: someone posing as a bank or public official. It stays off routine transfers, so it isn’t ignored.</p></article><article><div class="shot"><img src="../assets/img/screens/odakbank-track.webp" alt="Track the money until it lands, Odakbank screen" loading="lazy"></div><span class="pain">15 complaints · never arrived</span><h3>Track the money until it lands</h3><p>Sent, at the recipient’s bank, in the account: three steps with timestamps. On a FAST transfer the ring fills in seconds and the receipt can be shared right away.</p></article><article><div class="shot"><img src="../assets/img/screens/odakbank-error.webp" alt="Say where the money is, first, Odakbank screen" loading="lazy"></div><span class="pain">8 complaints · unclear errors</span><h3>Say where the money is, first</h3><p>The first line answers the real question: “Paranız hesabınızda” (Your money is in your account). Then what happened, what to do, and a retry that can’t send twice.</p></article></div>
+  <div class="sec-head rv" style="margin-top:clamp(56px,9vh,96px)"><h2 style="font-size:clamp(26px,3vw,38px)">Smaller fixes, same idea</h2></div>
+  <div class="decisions rv" style="--n:3"><article><div class="shot"><img src="../assets/img/screens/odakbank-summary.webp" alt="No surprises at confirmation, Odakbank screen" loading="lazy"></div><span class="pain">4 complaints · unexpected fee</span><h3>No surprises at confirmation</h3><p>Fee, balance after the transfer and how fast it lands (“Anında · FAST”, Instant) are all visible before the user commits.</p></article><article><div class="shot"><img src="../assets/img/screens/odakbank-otp.webp" alt="Two ways out of a missing code, Odakbank screen" loading="lazy"></div><span class="pain">5 complaints · code didn’t arrive</span><h3>Two ways out of a missing code</h3><p>SMS autofill, a visible resend timer and an in-app approval fallback, if regulation allows it.</p></article><article><div class="shot"><img src="../assets/img/screens/odakbank-wait.webp" alt="Calm when it’s slow, Odakbank screen" loading="lazy"></div><span class="pain">Edge case · slow transfer</span><h3>Calm when it’s slow</h3><p>When a transfer takes longer than usual, the screen says how long it has been, that the money is safe and that it is refunded if it doesn’t land.</p></article></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>How it evolved</h2></div>
+  <div class="prows"><article class="rv"><div class="media"><img src="../assets/img/odakbank/wireframes.jpg" alt="Structure before style" loading="lazy"></div><div class="copy"><span class="pain">Step 1 · Wireframes</span><h3>Structure before style</h3><p>Seven greyscale screens, each tagged with its step in the flow and the complaint it answers, so every element had to earn its place.</p></div></article><article class="rv"><div class="media"><img src="../assets/img/odakbank/compare.jpg" alt="From correct to convincing" loading="lazy"></div><div class="copy"><span class="pain">Step 2 · v1 → v2</span><h3>From correct to convincing</h3><p>v1 got the flow right but looked generic: text characters for icons, one card style, no brand moment. v2 adds a real icon set, a display face for numbers and depth, and turns the tracker into the hero screen.</p></div></article><article class="rv"><div class="media"><img src="../assets/img/odakbank/foundations.jpg" alt="Built on tokens, not one-offs" loading="lazy"></div><div class="copy"><span class="pain">Step 3 · Design system</span><h3>Built on tokens, not one-offs</h3><p>13 colour variables, 6 text styles and 5 component sets. Because the brand is green, success is never shown by colour alone: every status pairs an icon with text.</p></div></article></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>Words matter</h2><p>In a money app, one word can cause panic. I reviewed every string for tone, accuracy and Turkish banking conventions.</p></div>
+  <p class="lede rv" style="max-width:52ch;margin-bottom:28px">The first version of the slow-transfer screen said “Gecikiyor”. Looking at it as a user, I would have panicked, so I rewrote it, and then the rest.</p>
+  <ul class="rewrites rv"><li><div class="was"><s>Gecikiyor</s><small>It’s delayed</small></div><span class="to" aria-hidden="true">→</span><div class="now"><b>Beklenenden uzun sürüyor</b><small>Taking longer than usual</small></div><p>“Delayed” reads as “something is wrong”. The new label says what is happening and sits next to a promise that the money is safe.</p></li><li><div class="was"><s>sen</s><small>informal “you”</small></div><span class="to" aria-hidden="true">→</span><div class="now"><b>siz</b><small>formal “you”</small></div><p>Turkish banks address customers formally. The informal voice made a money app feel careless.</p></li><li><div class="was"><s>Bilgi alıcının bankasından geldi</s><small>Info came from the recipient’s bank</small></div><span class="to" aria-hidden="true">→</span><div class="now"><b>Ad, banka kayıtlarından alındı</b><small>The name comes from bank records</small></div><p>Says exactly what was checked: the user didn’t type this name.</p></li><li><div class="was"><s>Birkaç dakika</s><small>A few minutes</small></div><span class="to" aria-hidden="true">→</span><div class="now"><b>Anında · FAST</b><small>Instant · FAST</small></div><p>FAST transfers land in seconds. A vague estimate created worry that wasn’t needed.</p></li><li><div class="was"><s>Para iste</s><small>Request money</small></div><span class="to" aria-hidden="true">→</span><div class="now"><b>IBAN paylaş</b><small>Share IBAN</small></div><p>“Asking for money” sounds blunt in Turkish. Sharing a correct IBAN also prevents wrong-IBAN mistakes from the recipient’s side.</p></li></ul>
+</div></section>
+
+<section class="sec" id="prototype"><div class="wrap">
+  <div class="sec-head rv"><h2>The prototype</h2><p>Send ₺2.500 from the home screen. The tracker fills on its own when the money lands.</p></div>
+  <div class="rv"><div class="player" data-embed="https://embed.figma.com/proto/Xk2Ts7TVGjA5XOgJDJNBs8/Serra-Marangoz---2026-Portfolio?node-id=326-71&amp;starting-point-node-id=326%3A71&amp;scaling=scale-down&amp;content-scaling=fixed&amp;embed-host=share" data-title="Send money with Odakbank">
+  <button class="poster" type="button">
+    <img class="bgimg" src="../assets/img/work/odakbank.jpg" alt="" loading="lazy" onerror="this.remove()">
+    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+    <strong>Send money with Odakbank</strong><small>Figma prototype · 10 screens</small>
+  </button>
+</div>
+  <div class="player-note"><span>Loads from Figma. Works best on desktop.</span><a href="https://www.figma.com/proto/Xk2Ts7TVGjA5XOgJDJNBs8/Serra-Marangoz---2026-Portfolio?node-id=326-71&amp;starting-point-node-id=326%3A71&amp;scaling=scale-down&amp;content-scaling=fixed" target="_blank" rel="noopener">Open in Figma ↗</a></div></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>What’s next</h2><p>What I would test and design before handing this to a team.</p></div>
+  <ol class="process rv" style="--n:4"><li><span class="n">01</span><h3>Three usability tests</h3><p>Send rent to a new recipient, read the tracker, react to the error screen. Measured: task success, hesitation on the verify step and a 1–5 confidence score.</p></li><li><span class="n">02</span><h3>Regulation check</h3><p>Confirm whether in-app approval can replace, or only add to, SMS confirmation under BDDK rules.</p></li><li><span class="n">03</span><h3>EFT and limits</h3><p>Design the queued state for transfers outside FAST limits or hours, such as “Sırada · yarın 09:00” (Queued · tomorrow 09:00).</p></li><li><span class="n">04</span><h3>The recipient’s side</h3><p>Design “IBAN paylaş” so the person receiving money can share a correct IBAN in one tap.</p></li></ol>
+</div></section>
+</div>
+<div class="wrap"><a class="next" href="petigo.html"><small>Next case</small><b>Petigo</b><span class="arr" aria-hidden="true">→</span></a></div>
+
+</main>
+<footer class="foot"><div class="wrap"><span>© <span id="year">2026</span> Serra Marangoz · Jr. UI/UX Designer</span><span><a href="https://www.linkedin.com/in/serramarangoz" target="_blank" rel="noopener">LinkedIn ↗</a> · <a href="mailto:serramarangoz@gmail.com">serramarangoz@gmail.com</a></span></div></footer>
+<button class="totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../assets/site.js"></script>
+</body>
+</html>
