@@ -461,3 +461,5 @@ footer.foot a:hover{color:var(--ink)}
 .fullcase a{color:var(--ink);font-weight:500}
 .cx .prows .media img{object-position:top}
 @media (max-width:520px){.statrow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cx .prows .media,.odak .prows .media{max-height:none;aspect-ratio:auto;background:#fff}
+.cx .prows .media img,.odak .prows .media img{height:auto;width:100%;object-fit:contain;position:static}
