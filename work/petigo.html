@@ -26,6 +26,7 @@
 </header>
 <main>
 
+<div class="cx" style="--odak:#b94a06;--accent-text:#b94a06">
 <section class="case-hero"><div class="wrap">
   <a class="back" href="../#work">← All work</a>
   <div class="grid">
@@ -34,7 +35,7 @@
       <h1>Petigo</h1>
       <p class="lede">An AI-powered pet care assistant that turns scattered health records and anxious guesswork into one calm, trusted place.</p>
       <div class="tags"><span class="tag">UX Research</span><span class="tag">UX</span><span class="tag">UI</span><span class="tag">Design System</span><span class="tag">AI</span></div>
-      <div class="btns"><a class="btn solid" href="#prototype">Try the prototype</a><a class="btn" href="https://www.figma.com/proto/C54bb96qB5w5XtX8b9zPjk/Petigo-UI-UX-Case-Study?node-id=895-2174&amp;viewport=-1198%2C-329%2C0.02&amp;t=SDIR1xuiMTAx5967-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;starting-point-node-id=845%3A7476&amp;page-id=1%3A3123" target="_blank" rel="noopener">Full UX case study ↗</a></div>
+      <div class="btns"><a class="btn solid" href="#prototype">Try the prototype</a><a class="btn" href="#research">See the research</a></div>
     </div>
     <div class="media "><span class="ph" aria-hidden="true">Petigo</span><img src="../assets/img/work/petigo.jpg" alt="Petigo mockup" loading="eager" onerror="this.remove()"></div>
   </div>
@@ -42,18 +43,32 @@
 </div></section>
 
 <section class="sec"><div class="wrap">
-  <div class="sec-head rv"><h2>Every screen answers a pain point from research.</h2></div>
+  <div class="sec-head rv"><h2>The problem</h2></div>
+  <div class="story rv"><article class=""><span class="k">01 · Problem</span><h3>Pet health info lives everywhere, and nowhere.</h3><p>Lost paper records, missed appointments and misinformation online make it hard for owners to make the right decision at the right time. Care gets delayed and owners feel anxious.</p></article><article class="key"><span class="k">02 · Key insight</span><h3>The root cause wasn’t missing reminders.</h3><p>Interviews with vets showed that missed reminders were the symptom. The root cause was the lack of a standard format for a pet’s health history, so the Digital Health Record became the priority.</p></article><article class=""><span class="k">03 · Goal</span><h3>A calm “right now” assistant.</h3><p>Reduce cognitive load in anxious moments: one health record, smart reminders, an AI assistant and quick access to vets.</p></article></div>
+</div></section>
+
+<section class="sec" id="research"><div class="wrap">
+  <div class="sec-head rv"><h2>What 8 interviews revealed</h2></div>
+  <div class="research rv">
+    <div class="copy"><p class="lede">To test my assumptions, I talked to pet owners and to vets, the other key people in pet care.</p><p>I ran 35–40 minute interviews, online and face to face, with 6 pet owners and 2 veterinarians. The target audience was tech-savvy pet owners aged 25–45. I also benchmarked four local and global pet-care apps: Me Pety, My Pet, Pet Care and Digi Tail.</p><div class="statrow"><div><b class="tabular">6</b><span>pet owners</span></div><div><b class="tabular">2</b><span>vets</span></div><div><b class="tabular">35–40</b><span>min interviews</span></div><div><b class="tabular">4</b><span>apps benchmarked</span></div></div><div class="note"><b>Benchmark.</b> Existing apps mostly store data. Information isn’t filtered to the owner’s situation, and dashboards remind rather than guide.</div><div class="note"><b>Limitations.</b> Eight interviews are a small, qualitative sample. They shaped the direction but don’t show how common each problem is.</div></div>
+    <div><ol class="findings"><li><span class="n">01</span><div><h3>The trust gap</h3><p>Owners are overwhelmed by conflicting advice online. Filtering for accurate information increases anxiety.</p></div></li><li><span class="n">02</span><div><h3>Lack of expert guidance</h3><p>New owners want professional advice even for small issues. Not reaching an expert triggers stress.</p></div></li><li><span class="n">03</span><div><h3>Emotional isolation</h3><p>Managing care alone makes small emergencies feel like panic.</p></div></li><li><span class="n">04</span><div><h3>Cognitive load</h3><p>Tracking vaccines, medication and appointments in a busy routine creates a constant fear of forgetting.</p></div></li></ol></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>The journey, from panic to routine</h2><p>Pelin, the persona built from the interviews, finds a kitten, searches online, visits a vet and finally settles into a routine. Each stage pointed to an opportunity.</p></div>
+  <figure class="wide rv"><div class="media"><img src="../assets/img/cases/petigo-journey.jpg" alt="The journey, from panic to routine" loading="lazy"></div>
+  <figcaption><span>Opportunities: verified quick help, personalised notifications and faster logging, visual growth tracking.</span><a href="../assets/img/cases/petigo-journey.jpg" target="_blank" rel="noopener">Open full size ↗</a></figcaption></figure>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>Key decisions</h2><p>Every screen answers a pain point from research.</p></div>
   <div class="decisions rv" style="--n:4"><article><div class="shot"><img src="../assets/img/screens/petigo-1.webp" alt="Progressive onboarding screen" loading="lazy"></div><span class="pain">Information overload</span><h3>Progressive onboarding</h3><p>One question per screen. Breed, age and needs filter content from day one.</p></article><article><div class="shot"><img src="../assets/img/screens/petigo-3.webp" alt="Yuki, the AI assistant screen" loading="lazy"></div><span class="pain">Emotional isolation</span><h3>Yuki, the AI assistant</h3><p>24/7 guidance with quick-reply chips: vet advice in bite-sized steps.</p></article><article><div class="shot"><img src="../assets/img/screens/petigo-4.webp" alt="Digital health record screen" loading="lazy"></div><span class="pain">The trust gap</span><h3>Digital health record</h3><p>Vaccines and history in one card: the standard record vets asked for.</p></article><article><div class="shot"><img src="../assets/img/screens/petigo-5.webp" alt="Find a vet screen" loading="lazy"></div><span class="pain">No expert guidance</span><h3>Find a vet</h3><p>Topic, then vet, then time slot: booking designed to take under 3 taps.</p></article></div>
 </div></section>
 
 <section class="sec"><div class="wrap">
-  <div class="sec-head rv"><h2>At a glance</h2></div>
-  <div class="story rv"><article class=""><span class="k">01 · Problem</span><h3>Pet health info lives everywhere, and nowhere.</h3><p>Lost paper records, missed appointments and online misinformation delay care and leave owners anxious.</p></article><article class="key"><span class="k">02 · Key insight</span><h3>The root cause wasn’t missing reminders.</h3><p>Vet interviews showed the real gap is the lack of a standardized pet health history, so the Digital Health Record became the priority.</p></article><article class=""><span class="k">03 · Solution</span><h3>A calm “right now” assistant.</h3><p>Personalized onboarding, Yuki the AI assistant, one health record and smart reminders. Vet booking is designed to take under 3 taps.</p></article></div>
-</div></section>
-
-<section class="sec"><div class="wrap">
-  <div class="sec-head rv"><h2>How I got there</h2></div>
-  <ol class="process rv" style="--n:3"><li><span class="n">01</span><h3>Discovery</h3><p>8 in-depth interviews (35–40 min) with 6 pet owners and 2 vets.</p></li><li><span class="n">02</span><h3>Define</h3><p>4 pain points, the persona “Anxious Owner Pelin” and a journey map.</p></li><li><span class="n">03</span><h3>Design</h3><p>User flow, hi-fi screens and a Montserrat-based design system.</p></li></ol>
+  <div class="sec-head rv"><h2>How it evolved</h2></div>
+  <div class="prows"><article class="rv"><div class="media"><img src="../assets/img/cases/petigo-persona.jpg" alt="Anxious Owner Pelin" loading="lazy"></div><div class="copy"><span class="pain">Step 1 · Persona</span><h3>Anxious Owner Pelin</h3><p>A ceramic artist in Istanbul who unexpectedly rescues a kitten. She doesn’t need a complex dashboard; she needs a “right now” assistant.</p></div></article><article class="rv"><div class="media"><img src="../assets/img/cases/petigo-flow.jpg" alt="Four paths from one dashboard" loading="lazy"></div><div class="copy"><span class="pain">Step 2 · User flow</span><h3>Four paths from one dashboard</h3><p>Personalised onboarding leads to a home dashboard with four branches: Smart Health Passport, Yuki, Find a Vet and Profile.</p></div></article><article class="rv"><div class="media"><img src="../assets/img/cases/petigo-wireframes.jpg" alt="Structure before colour" loading="lazy"></div><div class="copy"><span class="pain">Step 3 · Wireframes</span><h3>Structure before colour</h3><p>Greyscale screens for onboarding, the health card, notes and vet booking, before any visual styling.</p></div></article><article class="rv"><div class="media"><img src="../assets/img/cases/petigo-style.jpg" alt="A warm visual language" loading="lazy"></div><div class="copy"><span class="pain">Step 4 · Style guide</span><h3>A warm visual language</h3><p>A Montserrat type scale, an orange primary palette with secondary accents, and illustrations created with Replit AI.</p></div></article></div>
 </div></section>
 
 <section class="sec" id="prototype"><div class="wrap">
@@ -65,9 +80,15 @@
     <strong>Try the Petigo prototype</strong><small>Interactive Figma prototype · opens here</small>
   </button>
 </div>
-  <div class="player-note"><span>Loads from Figma. Works best on desktop.</span><a href="https://www.figma.com/proto/C54bb96qB5w5XtX8b9zPjk/Petigo-UI-UX-Case-Study?node-id=734-3804&amp;p=f&amp;viewport=443%2C247%2C0.1&amp;t=T1dOfKxaq3FD87UX-1&amp;scaling=scale-down&amp;content-scaling=responsive&amp;starting-point-node-id=734%3A3804&amp;page-id=734%3A3727" target="_blank" rel="noopener">Open in Figma ↗</a></div></div>
+  <div class="player-note"><span>Loads from Figma. Works best on desktop.</span><a href="https://www.figma.com/proto/C54bb96qB5w5XtX8b9zPjk/Petigo-UI-UX-Case-Study?node-id=734-3804&amp;p=f&amp;viewport=443%2C247%2C0.1&amp;t=T1dOfKxaq3FD87UX-1&amp;scaling=scale-down&amp;content-scaling=responsive&amp;starting-point-node-id=734%3A3804&amp;page-id=734%3A3727" target="_blank" rel="noopener">Open in Figma ↗</a></div>
+  <p class="fullcase"><a href="https://www.figma.com/proto/C54bb96qB5w5XtX8b9zPjk/Petigo-UI-UX-Case-Study?node-id=895-2174&amp;viewport=-1198%2C-329%2C0.02&amp;t=SDIR1xuiMTAx5967-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;starting-point-node-id=845%3A7476&amp;page-id=1%3A3123" target="_blank" rel="noopener">Full UX case study ↗</a></p></div>
 </div></section>
 
+<section class="sec"><div class="wrap">
+  <div class="sec-head rv"><h2>What I’d do next</h2></div>
+  <ol class="process rv" style="--n:3"><li><span class="n">01</span><h3>Usability sessions</h3><p>Run moderated sessions on onboarding, the health record and vet booking, the three flows that carry the most anxiety.</p></li><li><span class="n">02</span><h3>Measure the booking flow</h3><p>Vet booking is designed to take under 3 taps. That is a design target, to be measured in testing.</p></li><li><span class="n">03</span><h3>Faster data entry</h3><p>The journey map points to voice or photo (OCR) logging to reduce manual entry. It isn’t designed yet.</p></li></ol>
+</div></section>
+</div>
 <div class="wrap"><a class="next" href="audioflow.html"><small>Next case</small><b>AudioFlow</b><span class="arr" aria-hidden="true">→</span></a></div>
 
 </main>
