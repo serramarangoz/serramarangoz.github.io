@@ -464,3 +464,12 @@ footer.foot a:hover{color:var(--ink)}
 .cx .prows .media,.odak .prows .media{max-height:none;aspect-ratio:auto;background:#fff}
 .cx .prows .media img,.odak .prows .media img{height:auto;width:100%;object-fit:contain;position:static}
 .about-top.no-portrait{grid-template-columns:minmax(0,1fr);max-width:820px}
+.about-top.no-portrait{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);max-width:none;align-items:start}
+.snapshot{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3vw,36px);display:grid;gap:18px;align-self:center}
+.snapshot dl{margin:0;display:grid}
+.snapshot dl div{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.snapshot dt{color:var(--mute);font-size:14px}
+.snapshot dd{margin:0;font-weight:500}
+.snapshot dd a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.snapshot .btn{justify-self:start}
+@media (max-width:900px){.about-top.no-portrait{grid-template-columns:1fr}}
