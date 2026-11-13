@@ -473,10 +473,9 @@ footer.foot a:hover{color:var(--ink)}
 .snapshot dd a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .snapshot .btn{justify-self:start}
 @media (max-width:900px){.about-top.no-portrait{grid-template-columns:1fr}}
-/* about without photo: text spread across the width */
+/* about without photo: heading on top, text spread across the width */
 .about-top.no-portrait{display:block;max-width:none}
-.about-top.no-portrait .bio{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:18px clamp(32px,6vw,96px);align-items:start}
+.about-top.no-portrait .bio{display:grid;grid-template-columns:1fr;gap:28px}
 .about-top.no-portrait .intro{display:grid;gap:14px}
 .about-top.no-portrait .paras{display:grid;gap:18px}
-.about-top.no-portrait .paras p{max-width:none;font-size:clamp(17px,1.25vw,19px)}
-@media (max-width:900px){.about-top.no-portrait .bio{grid-template-columns:1fr}}
+.about-top.no-portrait .paras p{max-width:none;font-size:clamp(17px,1.35vw,20px);line-height:1.6}
