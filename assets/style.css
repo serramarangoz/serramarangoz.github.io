@@ -479,3 +479,4 @@ footer.foot a:hover{color:var(--ink)}
 .about-top.no-portrait .intro{display:grid;gap:14px}
 .about-top.no-portrait .paras{display:grid;gap:18px}
 .about-top.no-portrait .paras p{max-width:none;font-size:clamp(17px,1.35vw,20px);line-height:1.6}
+svg.ext{display:inline-block;vertical-align:-0.08em;margin-left:.1em;flex:none}
