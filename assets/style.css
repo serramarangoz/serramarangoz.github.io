@@ -480,3 +480,12 @@ footer.foot a:hover{color:var(--ink)}
 .about-top.no-portrait .paras{display:grid;gap:18px}
 .about-top.no-portrait .paras p{max-width:none;font-size:clamp(17px,1.35vw,20px);line-height:1.6}
 svg.ext{display:inline-block;vertical-align:-0.08em;margin-left:.1em;flex:none}
+/* tighter vertical rhythm on phones */
+@media (max-width:700px){
+  .hero{padding-block:40px 24px}
+  .hero .row{margin-top:28px}
+  .sec{padding-block:44px}
+  .about-top{margin-bottom:36px}
+  .sec-head{margin-bottom:24px}
+}
+.hero .facts div{align-content:start}
