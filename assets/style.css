@@ -489,3 +489,28 @@ svg.ext{display:inline-block;vertical-align:-0.08em;margin-left:.1em;flex:none}
   .sec-head{margin-bottom:24px}
 }
 .hero .facts div{align-content:start}
+
+/* odakbank flow audit */
+.scorebar{display:grid;grid-template-columns:auto 32px auto minmax(0,1fr);gap:16px 24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px 26px;margin-bottom:28px}
+.scorebar div{display:grid;gap:2px}
+.scorebar b{font-family:var(--f-display);font-weight:600;font-size:clamp(30px,3.4vw,44px);line-height:1}
+.scorebar div:last-of-type b{color:var(--odak)}
+.scorebar span{font-size:13px;color:var(--mute)}
+.scorebar .to{font-size:22px;color:var(--mute)}
+.scorebar p{margin:0;color:var(--ink-2);font-size:15px}
+.audit{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.audit li{display:grid;grid-template-columns:110px minmax(0,1.1fr) minmax(0,1fr) minmax(0,1.2fr);gap:10px 20px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start;font-size:15px}
+.audit .grp{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding-top:2px}
+.audit .q{font-weight:500}
+.audit .was{color:var(--mute)}
+.audit .now{color:var(--ink)}
+.audit .x,.audit .ok{display:inline-block;width:1.3em;font-weight:700}
+.audit .x{color:#B3261E}.audit .ok{color:var(--odak)}
+.risk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.risk .cell{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:grid;gap:4px;align-content:start}
+.risk .cell:first-child{background:var(--odak-tint);border-color:transparent}
+.risk b{font-family:var(--f-display);font-weight:600;font-size:18px}
+.risk small{color:var(--mute);font-size:13px}
+.risk ul{margin:8px 0 0;padding-left:18px;color:var(--ink-2);font-size:15px;display:grid;gap:4px}
+@media (max-width:820px){.scorebar{grid-template-columns:auto 24px auto}.scorebar p{grid-column:1/-1}.audit li{grid-template-columns:1fr}.audit .grp{padding:0}}
+@media (max-width:520px){.risk{grid-template-columns:1fr}}
