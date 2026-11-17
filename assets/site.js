@@ -102,7 +102,7 @@
 
 // scrollspy: highlight the section in view (home page)
 (function(){
-  var ids = ['about','work','contact'], secs = ids.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  var ids = ['work','about','contact'], secs = ids.map(function(id){ return document.getElementById(id); }).filter(Boolean);
   if (!secs.length) return;
   var links = {}; document.querySelectorAll('.menu a:not(.open)').forEach(function(a){ var h=a.getAttribute('href')||''; var i=h.indexOf('#'); if(i>-1){ var id=h.slice(i+1); if(ids.indexOf(id)>-1) links[id]=a; } });
   var label = document.querySelector('.rail .label'), names = {about:'About', work:'Work', contact:'Contact'}, current = null;
