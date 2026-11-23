@@ -618,3 +618,4 @@ details.more.notes .note{margin-bottom:12px}
 }
 @media (max-width:700px){.tools div{align-content:start}.tools dd{margin-top:0!important}}
 @media (max-width:700px){#about .cv>div:first-child{display:none}}
+@media (max-width:700px){.cv dl.tools{border-top:1px solid var(--ink);padding-top:16px}.cv h3{margin-bottom:14px}}
