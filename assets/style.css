@@ -602,3 +602,18 @@ details.more.notes .note{margin-bottom:12px}
   .cx .wide .media{display:flex;justify-content:center;background:#fff}
   .cx .wide .media img{min-width:0;width:auto;max-width:100%;max-height:min(620px,68vh);object-fit:contain}
 }
+/* ---- mobile polish ---- */
+@media (max-width:700px){
+  .odak .story,.cx .story,.odak .decisions,.cx .decisions,.odak .process,.cx .process,.odak .prows,.cx .prows,.odak .minis,.rewrites,.risk{scroll-padding-inline:20px}
+  .casenav{top:72px}
+  html{scroll-padding-top:136px}
+  .tabs label{font-size:13px;padding:8px 13px}
+  .hero .btns{display:flex;flex-wrap:nowrap;gap:10px}
+  .hero .btns .btn{flex:1 1 0;justify-content:center;padding-inline:14px;white-space:nowrap}
+  .tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;border-top:0}
+  .tools div{display:grid!important;grid-template-columns:1fr!important;gap:4px;border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:14px!important}
+  .tools dt{font-size:15px}
+  .tools dd{font-size:13px;line-height:1.45;color:var(--ink-2);margin:0}
+  .cards{gap:36px}
+}
+@media (max-width:700px){.tools div{align-content:start}.tools dd{margin-top:0!important}}
