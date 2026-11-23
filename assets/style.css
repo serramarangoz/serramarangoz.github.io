@@ -518,3 +518,87 @@ svg.ext{display:inline-block;vertical-align:-0.08em;margin-left:.1em;flex:none}
 #work{border-top:0}
 @media (max-width:700px){#work{padding-top:28px}}
 @media (min-width:901px){.hero-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.hero-grid h1{font-size:clamp(44px,5vw,80px)}}
+
+/* ---- shorter case pages ---- */
+html{scroll-padding-top:128px}
+.casenav{position:sticky;top:72px;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.casenav .wrap{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:10px}
+.casenav .wrap::-webkit-scrollbar{display:none}
+.casenav a{flex:none;font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+.casenav a:hover{color:var(--ink);border-color:var(--ink)}
+.odak .sec,.cx .sec{padding-block:clamp(48px,8vh,96px)}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs input{position:absolute;opacity:0;pointer-events:none}
+.tabs label{cursor:pointer;font-size:14px;font-weight:500;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2)}
+.tabs input:checked+label{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabs input:focus-visible+label{outline:2px solid var(--ink);outline-offset:2px}
+.tabs .tab{display:none;flex-basis:100%;margin-top:10px}
+#ft1:checked~.t1,#ft2:checked~.t2{display:grid}
+/* smaller fixes as compact rows */
+.subhead{font-size:clamp(20px,2vw,26px);margin:clamp(36px,6vh,64px) 0 18px}
+.minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.minis .mini{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:14px}
+.minis img{width:88px;height:auto;border-radius:12px;box-shadow:0 10px 24px -14px rgba(20,15,10,.35)}
+.minis .pain{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text,var(--mute))}
+.minis h3{font-size:17px;margin:4px 0}
+.minis p{font-size:14px;color:var(--ink-2);margin:0}
+@media (max-width:1000px){.minis{grid-template-columns:1fr}}
+/* collapsible */
+details.more{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:0 20px}
+details.more summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:600;display:flex;justify-content:space-between;gap:12px}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:"+";font-size:20px;line-height:1;color:var(--mute)}
+details.more[open] summary::after{content:"–"}
+details.more .audit{margin-bottom:12px}
+/* process rows as a compact 2-column grid on case pages */
+@media (min-width:821px){
+  .odak .prows,.cx .prows{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+  .odak .prows article,.cx .prows article,.odak .prows article:nth-child(even),.cx .prows article:nth-child(even){grid-template-columns:1fr;gap:14px;align-items:start}
+  .odak .prows article:nth-child(even) .media,.cx .prows article:nth-child(even) .media{order:0}
+  .odak .prows .media,.cx .prows .media{max-height:360px;overflow:hidden}
+  .odak .prows .media img,.cx .prows .media img{height:360px;object-fit:cover;object-position:top}
+  .odak .prows h3,.cx .prows h3{font-size:22px}
+}
+/* phones: swipe rows instead of long stacks */
+@media (max-width:700px){
+  .odak .story,.cx .story,.odak .decisions,.cx .decisions,.odak .process,.cx .process,.odak .prows,.cx .prows,.odak .minis{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:-20px;padding:0 20px 8px;scrollbar-width:none}
+  .odak .story::-webkit-scrollbar,.cx .story::-webkit-scrollbar,.odak .decisions::-webkit-scrollbar,.cx .decisions::-webkit-scrollbar,.odak .process::-webkit-scrollbar,.cx .process::-webkit-scrollbar,.odak .prows::-webkit-scrollbar,.cx .prows::-webkit-scrollbar,.odak .minis::-webkit-scrollbar{display:none}
+  .odak .story>*,.cx .story>*,.odak .decisions>*,.cx .decisions>*,.odak .process>*,.cx .process>*,.odak .prows>*,.cx .prows>*,.odak .minis>*{flex:0 0 82%;scroll-snap-align:start}
+  .odak .decisions .shot,.cx .decisions .shot{aspect-ratio:3/4.2}
+  .odak .prows .media img,.cx .prows .media img{max-height:300px;object-fit:cover;object-position:top}
+  .swipe-hint{display:block}
+  .casenav{top:64px}
+}
+details.more.notes{padding:0 16px}
+details.more.notes .note{margin-bottom:12px}
+@media (max-width:700px){details.more.notes:not([data-touched]){}}
+/* flow image: fit the screen */
+.tabs .media{display:flex;justify-content:center;background:var(--surface)}
+.tabs .media img{min-width:0!important;width:auto;max-width:100%;max-height:min(640px,70vh);object-fit:contain}
+/* process: 4 across on wide screens */
+@media (min-width:1101px){
+  .odak .prows,.cx .prows{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+  .cx .prows{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .odak .prows .media,.cx .prows .media{max-height:240px}
+  .odak .prows .media img,.cx .prows .media img{height:240px}
+  .odak .prows h3,.cx .prows h3{font-size:19px}
+  .odak .prows p,.cx .prows p{font-size:15px}
+}
+/* rewrites as cards */
+@media (min-width:821px){
+  .rewrites{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:0}
+  .rewrites li{grid-template-columns:1fr;border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:18px;gap:8px}
+  .rewrites .to{display:none}
+}
+@media (max-width:700px){
+  .rewrites,.risk{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:-20px;padding:0 20px 8px;scrollbar-width:none;border-top:0}
+  .rewrites>li,.risk>.cell{flex:0 0 82%;scroll-snap-align:start}
+  .rewrites li{grid-template-columns:1fr;border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:18px}
+  .rewrites .to{display:none}
+}
+@media (min-width:701px){
+  .odak .decisions .shot,.cx .decisions .shot{aspect-ratio:auto;height:min(440px,52vh)}
+  .cx .wide .media{display:flex;justify-content:center;background:#fff}
+  .cx .wide .media img{min-width:0;width:auto;max-width:100%;max-height:min(620px,68vh);object-fit:contain}
+}
