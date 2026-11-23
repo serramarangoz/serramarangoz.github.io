@@ -617,3 +617,4 @@ details.more.notes .note{margin-bottom:12px}
   .cards{gap:36px}
 }
 @media (max-width:700px){.tools div{align-content:start}.tools dd{margin-top:0!important}}
+@media (max-width:700px){#about .cv>div:first-child{display:none}}
